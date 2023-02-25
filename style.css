@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+header {
+    background: hsl(217, 28%, 15%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: hsl(0,0%,95%);
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    max-width: 20%;
+}
+/* Essayer de mettre un max-width = 10% pour cette image et la changer pour un max-width: 20% au niveau du responsive
+    avec un max-width:390px */
+header ul li a{
+    padding: 10px;
+    color: hsl(0,0%,95%);
+    font-size: 14px;
+}
+
+main {
+    background: hsl(218, 28%, 13%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45px;
+}
+
+main .intro {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    color: hsl(0,0%,95%);
+    text-align: center;
+}
+
+main .intro .intro-title{
+    font-size: 38px;
+    max-width: 70%;
+    margin-bottom: 20px;
+}
+main .intro .intro-text {
+    font-size: 15px;
+    max-width: 42%;
+    margin-bottom: 20px;
+}
+main .intro button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 85px;
+    border-radius: 45px;
+    color: hsl(0,0%,95%);
+    background:  hsl(176, 68%, 64%);
+    border: none;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+    main .intro button:hover {
+        background: hsl(198, 60%, 50%);
+        cursor: pointer;
+        transition : 1s;
+    }
+main .intro img {
+    max-width: 75%;
+}
+
+/*  Au niveau des medias queries ,Pour les max-width de title et intro-text, on aura 90% et 70%*/
+
+main .features-section {
+    width: 100%;
+    display: grid;
+    height: auto;
+    grid-template-columns:repeat(2,33%);
+    gap: 15%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+main .features-section .feature-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: hsl(0,0%,95%);
+}
+.features-section .feature-block h2 , .features-section .feature-block img {
+    margin-bottom: 10px;
+}
+
+/*Voir comment changer le grid-templates column pour ajouter du responsive*/
+main .stay-productive {
+    width: 100%;
+    max-width: 99%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 75px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+.stay-productive img {
+    max-width: 80%;
+}
+
+.stay-productive .stay-productive-text {
+    text-align: left;
+    margin-left: 27px;
+    margin-top: -70px;
+    color: hsl(0,0%,95%);
+    font-size: 1rem;
+}
+.stay-productive .stay-productive-text h1 {
+    font-size: 45px;
+    max-width: 65%;
+    margin-bottom: 15px;
+}
+.stay-productive .stay-productive-text p {
+    max-width: 70%;
+    margin-bottom: 20px;
+}
+.stay-productive .stay-productive-text button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    color: hsl(176, 68%, 64%);
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+}
+.stay-productive .stay-productive-text button:hover {
+    color: hsl(0,0%,95%);
+    transition: 1s;
+    cursor: pointer;
+    border-bottom: 1px solid hsl(0,0%,95%);
+}
+.stay-productive .stay-productive-text button img {
+    margin-left: 10px;
+} 
+
+
+
+main .testimonies-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 95%;
+    margin-bottom: 150px;
+}
+
+.testimonies-section .testimony-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    max-width: 28%;
+    background: hsl(219, 30%, 18%);
+    margin: 12px;
+    min-height: 170px;
+    border-radius: 7px;
+    text-align: left;
+    color: hsl(0,0%,95%);
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+.testimony-block p {
+    margin-bottom: 10px;
+}
+.testimonies-section img {
+    max-width: 10%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testimony-block .testimony-owner {
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    font-weight: 100;
+}
+.testimony-owner span {
+    font-weight: 700;
+}
+
+
+.get-access {
+    display: flex;
+    max-width: 68%;
+    flex-direction: column;
+    background: hsl(217, 28%, 15%);
+    margin-bottom: -70px;
+    z-index: 4;
+    min-height: 180px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 25px 0;
+    border-radius: 10px;
+}
+
+.get-access .get-access-title {
+    font-size:42px;
+}
+.get-access .get-access-desc {
+    max-width: 75%;
+    text-align: center;
+    margin: 14px 0;
+}
+.get-access .get-access-form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.get-access-form .valid {
+    max-width: 100%;
+    width: 22%;
+    box-sizing: content-box;
+    margin-right: 27%;
+}
+.get-access-form input{
+    height: 42px;
+    width: 210%;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border: none;
+}
+.get-access-form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 30px;
+    border-radius: 45px;
+    color: hsl(0,0%,95%);
+    background:  hsl(176, 68%, 64%);
+    border: none;
+    font-weight: 800;
+}
+    .get-access-form button:hover {
+        background: hsl(198, 60%, 50%);
+        transition: 1s;
+        cursor: pointer;
+    }
+
+.get-access-form span {
+    color:  hsl(0, 100%, 63%);
+    display: none;
+}
+
+footer {
+    background-color: hsl(216, 53%, 9%);
+    display: flex;
+    flex-direction: column;
+    justify-content : flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-height : 400px;
+    padding-left: 4%;
+    box-sizing :border-box;
+    padding-top: 8%;
+
+}
+
+footer .logo-pic {
+    width: 10%;
+    margin-bottom : 3%;
+}
+footer .footer-blocks{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.footer-blocks .footer-info-block {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;  
+    line-height : 35px;
+    color : hsl(0,0%,95%);
+}
+.footer-blocks #location {
+    max-width: 45%;
+    width: 1700px;
+    display :flex;
+    justify-content : flex-start;
+    align-items: flex-start; 
+    line-height: 22px;
+}
+
+.footer-blocks #location img {
+    margin-right: 10px;
+}
+.footer-blocks #socials ul {
+    display: flex;
+}   
+
+.footer-blocks #socials ul li a {
+    display: flex;
+    justify-content : center;
+    align-items : center;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.footer-blocks #socials ul li a:hover {
+    color: hsl(198, 60%, 50%);
+    border-color :hsl(198, 60%, 50%);
+    transition : 1s;
+}
+
+.footer-blocks .contact-us li{
+    display: flex;
+    align-items: center;
+}
+.footer-blocks .contact-us img{
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color : hsl(0,0%,95%);
+}
+@media screen and (max-width : 936px) {
+    main .stay-productive {
+        display: flex;
+        flex-direction : column;
+        margin-left: 0;
+    }
+    .stay-productive .stay-productive-text h1 {
+        text-align: left;
+        font-size: 45px;
+        max-width: 70%;
+    }
+    .stay-productive .stay-productive-text {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    footer .logo-pic {
+        width: 15%;
+    }
+    footer .footer-blocks {
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    footer .footer-blocks .footer-info-block {
+        justify-content: left;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width : 813px) {
+    main .testimonies-section .testimony-block{
+        max-width: 40%;
+    }
+    footer {
+        padding-top: 15%;
+    }
+}
+@media screen and (max-width : 780px) {
+    main .testimonies-section {
+        flex-direction : column
+    }
+    main .testimonies-section .testimony-block{
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width : 654px) {
+    main .intro .intro-title {
+        max-width: 90%;
+    }
+    main .intro .intro-text {
+        max-width: 80%;
+    }
+    .get-access {
+        max-width :90% ;
+    }
+    .stay-productive {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .stay-productive .stay-productive-text {
+        max-width: 100%;
+        align-items: left;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .stay-productive .stay-productive-text  h1{
+        font-size: 35px;
+        max-width: 90%;
+    }
+    footer {
+        padding-top: 30%;
+    }
+}
+@media screen and (max-width : 430px) {
+    .get-access {
+        flex-direction: column;
+        align-items: center;
+        max-width: 96%;
+        padding: 0;
+        min-height: 270px;
+    }
+    .get-access .get-access-title {
+        font-size: 40px;
+        max-width: 100%;
+    }
+    .get-access .get-access-desc {
+        max-width: 90%;
+    }
+    .get-access-form {
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+    .get-access-form .valid {
+        width: 70%;
+    }
+    .get-access-form  span{
+        display: block;
+        max-width: 100%;
+        margin-bottom : 20px;
+    }
+    .get-access-form .valid input {
+        width: 130%;
+        margin-bottom: 5px;
+    }
+    .get-access-form button {
+        padding: 12px 120px;
+    }
+    .get-access .get-access-form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    main .features-section {
+        grid-template-columns:repeat(1,90%);
+        gap: 8%;
+        margin-bottom: 200px;
+    }
+    main .features-section .feature-block img {
+        width: 15%;
+    }
+    main .stay-productive {
+        align-items: flex-start;
+        margin : 50px 0;
+    }
+    .stay-productive .stay-productive-text {
+        align-items: flex-start;
+    }
+    .get-access {
+        min-height: 300px;
+    }
+    .get-access-form button {
+        padding: 12px 100px;
+    }
+    .get-access .get-access-title {
+        font-size: 35px;
+    }
+    footer .logo-pic{
+        width: 35%;
+    }
+
+}
+
+.footer-blocks #socials ul li a {
+    display: flex;
+    justify-content : center;
+    align-items : center;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 5px;
+}
